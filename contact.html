@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Cey Fit</title>
+    <link rel="stylesheet" href="navbar styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">
+        <img src="img/logo final.png" alt="Cey Fit Logo" onclick="redirectToHome()">
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="activewear.html">ActiveWear</a></li>
+        <li><a href="promowear.html">PromoWear</a></li>
+        <li><a href="testimonials.html">Clients</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <video autoplay muted loop class="hero-video">
+        <source src="vds/100884-video-720.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Drop Your <span>Requirements!</span></h1>
+        <p>Let’s bring your custom design to life. Contact us now!</p>
+        <a href="https://wa.me/94728462951" class="cta-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- Email Form Section -->
+<section class="email-section">
+    <h2>Wanna Be More Professional? <span>Send Us an Email</span></h2>
+    <form action="send_email.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta-btn">Send Email</button>
+    </form>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cey Fit Logo -->
+        <div class="footer-logo">
+            <img src="img/logo final.png" alt="Cey Fit Logo">
+        </div>
+
+        <!-- Social Media Section -->
+        <p class="footer-heading">We are available on:</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Quick Links Section -->
+        <p class="footer-heading">Quick Links:</p>
+        <div class="footer-links">
+            <a href="#" id="scrollToTop">Home</a>
+            <a href="activewear.html">ActiveWear</a>
+            <a href="promowear.html">PromoWear</a>
+            <a href="testimonials.html">Clients</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <p class="copyright">© 2025 Cey Fit. All Rights Reserved.</p>
+        <p class="credits">
+            A website by 
+            <a href="http://zent.lovestoblog.com" target="_blank" class="highlight">Dhammika Zent</a>
+        </p>
+
+        <!-- LinkedIn & WhatsApp Contact -->
+<p class="contact-links">
+    <i class="fab fa-whatsapp"></i> 
+    <a href="https://wa.me/94728462951" target="_blank">+94 72 8 462 951</a> |  
+    <i class="fab fa-linkedin"></i> 
+    <a href="https://www.linkedin.com/in/dhammika-senarathna-032156351/" target="_blank">Dhammika Senarathna</a>
+</p>
+
+    </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+
+<!-- JavaScript -->
+<script>
+    function redirectToHome() {
+        window.location.href = "home.html";
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+    });
+});
+
+</script>
+
+
+</body>
+</html>

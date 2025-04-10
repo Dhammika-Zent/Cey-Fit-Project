@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cey Fit</title>
+    <link rel="stylesheet" href="navbar styles.css">
+    <link rel="stylesheet" href="hero styles.css">
+    <link rel="stylesheet" href="about styles.css">
+    <link rel="stylesheet" href="actwear styles.css">
+    <link rel="stylesheet" href="promo styles.css">
+    <link rel="stylesheet" href="testimonials styles.css">
+    <link rel="stylesheet" href="contact styles.css">
+    <link rel="stylesheet" href="footer styles.css">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+    
+    
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="img/logo final.png" alt="Cey Fit Logo" onclick="redirectToHome()">
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="activewear.html">ActiveWear</a></li>
+        <li><a href="promowear.html">PromoWear</a></li>
+        <li><a href="testimonials.html">Clients</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+    
+
+
+<!--Hero section-->
+<section class="hero" id="hero-content">  <!-- Add this id -->
+        <video autoplay muted loop class="hero-video">
+            <source src="vds/Home final.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    
+        <div class="hero-overlay"></div> <!-- Dark overlay for readability -->
+    
+        <div class="hero-content">
+            <h1>Elevate Your Style with <span>Cey Fit</span></h1>
+            <p>Premium ActiveWear & PromoWear for Every Occasion</p>
+            <a href="#activewear" class="cta-btn">Explore Our Works</a>
+        </div>
+    </section>
+    
+   <script>document.addEventListener("visibilitychange", function () {
+    let video = document.querySelector(".hero-video");
+    if (document.hidden) {
+        video.play(); // Force play when tab is inactive
+    }
+});</script> 
+
+
+<!-- About Us Section -->
+<section class="about" id="about">
+    <div class="about-container about-content"> 
+        <div class="about-text">
+            <h2>Who <span>Are We?</span></h2>
+            <p>
+                At Cey Fit, we specialize in high-quality shirt printing for activewear and promotional t-shirts. 
+                Our mission is to provide individuals and businesses with premium custom-printed apparel that 
+                showcases their brand with style and durability.
+            </p>
+            <p>
+                With a commitment to excellence, we use advanced printing techniques and top-grade materials 
+                to ensure every design stands out and lasts.
+            </p>
+            
+            <h3 class="tagline">Custom. Quality. You.</h3>
+            <a href="contact.html" class="cta-btn">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Activewear Section -->
+<section class="activewear" id="activewear">
+    <div class="activewear-container">
+        
+        <!-- Left: Video -->
+        <div class="activewear-video-container">
+            <video autoplay muted loop class="activewear-video">
+                <source src="vds/mixkit-52102-video-52102-hd-ready.webm" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3 class="video-tag">#Activewear</h3>
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="activewear-text">
+            <h2>Confidence is the <span>Key!</span></h2>
+            <p>
+                Cey Fit specializes in <strong>custom-printed</strong> activewear designed to elevate your gym sessions, sports teams, and training groups.  
+                Experience the perfect fusion of <strong>premium materials, durability, and comfort</strong> with our high-quality premium custom designs.
+            </p>
+            <p>
+                <strong>Looking for premium activewear that represents your team, brand, or passion?</strong> Just Hit The Button!
+            </p>
+            
+            <a href="activewear.html" class="cta-btn">Explore More</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let activewearContainer = document.querySelector(".activewear-container");
+        if (activewearContainer) {
+            activewearContainer.classList.add("appear");
+        }
+    });
+    </script>
+
+<script>document.addEventListener("visibilitychange", function () {
+    let video = document.querySelector(".activewear-video");
+    if (document.hidden) {
+        video.play(); // Force play when tab is inactive
+    }
+});</script> 
+
+
+
+<!-- Promotional Wear Section -->
+<section class="promo-wear" id="promo-wear">
+    <div class="promo-wear-container">
+        
+        <!-- Left: Text Content -->
+        <div class="promo-text">
+            <h2>Promote Your <span>Brand</span> with Style!</h2>
+            <p>
+                Elevate your business, team, or event with <strong>custom-printed</strong> promotional wear.  
+                Our high-quality shirts are designed to make a lasting impact, perfect for <strong>corporate branding, giveaways, and special events</strong>.
+            </p>
+            
+            <p>
+                <strong>Wanna Stand out in the crowd with premium, durable designs?</strong> Just Hit The Button!
+            </p>
+            <a href="promowear.html" class="cta-btn">Explore More</a>
+        </div>
+
+        <!-- Right: Video -->
+        <div class="promo-video-container">
+            <video autoplay muted loop class="promo-video">
+                <source src="vds/7894254-uhd_4096_2160_25fps (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3 class="video-tag">#PromoWear</h3>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let promoWearContainer = document.querySelector(".promo-wear-container");
+        if (promoWearContainer) {
+            promoWearContainer.classList.add("appear");
+        }
+    });
+</script>
+
+<script>document.addEventListener("visibilitychange", function () {
+    let video = document.querySelector(".promo-video");
+    if (document.hidden) {
+        video.play(); // Force play when tab is inactive
+    }
+});</script>
+
+
+<section class="testimonials">
+    <h2>What Our <span class="highlight">Clients Say</span></h2>
+
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <img src="img/team-placeholder.webp" alt="Client 1">
+            <h3>Prasanna de Silva</h3>
+            <p class="profession">Football Coach</p>
+            <p class="feedback">Cey Fit has been a game-changer for our team! As the coach of Sunrise Football Club,
+                 I always seek high-quality, durable, and stylish gear for my players. 
+                 Cey Fit exceeded my expectations! Their attention to detail, premium fabrics, 
+                 and seamless customization make them the best in the business.
+                Proud to have our team wearing Cey Fit on the field! ⚽🔥</p>
+            </div>
+    </div>
+
+    
+    <!-- Button wrapped inside a div -->
+<div class="button-container">
+    <button onclick="redirectToTestimonials()">More Testimonials</button>
+</div>
+
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-container">
+        <!-- Left: Google Map -->
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=XXXXXXXXX" 
+                width="100%" height="350" style="border:0;" 
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="contact-info">
+            <h2>Get in <span>Touch</span></h2>
+            <p>Reach out to us for inquiries, custom designs, or collaborations.</p>
+
+            <div class="contact-details">
+                <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/XXXXXXXXXX" target="_blank">+94 77 123 4567</a></p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@ceyfit.com">info@ceyfit.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Main Street, Kandy, Sri Lanka</p>
+                
+
+            </div>
+
+            <!-- Call to Action -->
+            <p class="write-us">Or <span>write us</span> directly</p>
+            <a href="contact.html" class="cta-btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cey Fit Logo -->
+        <div class="footer-logo">
+            <img src="img/logo final.png" alt="Cey Fit Logo">
+        </div>
+
+        <!-- Social Media Section -->
+        <p class="footer-heading">We are available on:</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Quick Links Section -->
+        <p class="footer-heading">Quick Links:</p>
+        <div class="footer-links">
+            <a href="#" id="scrollToTop">Home</a>
+            <a href="activewear.html">ActiveWear</a>
+            <a href="promowear.html">PromoWear</a>
+            <a href="testimonials.html">Clients</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <p class="copyright">© 2025 Cey Fit. All Rights Reserved.</p>
+        <p class="credits">
+            A website by 
+            <a href="http://zent.lovestoblog.com" target="_blank" class="highlight">Dhammika Zent</a>
+        </p>
+
+        <!-- LinkedIn & WhatsApp Contact -->
+<p class="contact-links">
+    <i class="fab fa-whatsapp"></i> 
+    <a href="https://wa.me/94728462951" target="_blank">+94 72 8 462 951</a> |  
+    <i class="fab fa-linkedin"></i> 
+    <a href="https://www.linkedin.com/in/dhammika-senarathna-032156351/" target="_blank">Dhammika Senarathna</a>
+</p>
+
+    </div>
+</footer>
+
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+
+
+
+    
+
+
+
+
+<script src="testimonials script.js"></script>
+    <script src="navbar script.js"></script>
+    <script src= "actwear script.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutSection = document.querySelector(".about");
+        
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => { 
+                                aboutSection.classList.add("show");
+                            }, 300); // 300ms delay effect
+                            observer.unobserve(entry.target); // Stop observing after activation
+                        }
+                    });
+                },
+                { threshold: 0.2 } // Trigger when 20% of the section is visible
+            );
+        
+            observer.observe(aboutSection);
+        });
+        </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactSection = document.querySelector(".contact-container");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        contactSection.classList.add("appear");
+                    }
+                });
+            },
+            { threshold: 0.2 } // Trigger when 20% of the section is visible
+        );
+
+        observer.observe(contactSection);
+    });
+</script>
+
+<script>
+    document.getElementById("scrollToTop").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.getElementById("hero-content").scrollIntoView({ behavior: "smooth" });
+    });
+</script>
+
+
+<script>
+    function redirectToTestimonials() {
+        window.location.href = "testimonials.html"; // Redirects to the full testimonials page
+    }
+</script>
+
+
+
+<script>
+    function redirectToHome() {
+        window.location.href = "home.html";
+    }
+</script>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const exploreButton = document.querySelector(".cta-btn[href='#activewear']");
+        const activewearSection = document.getElementById("activewear");
+
+        if (exploreButton && activewearSection) {
+            exploreButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                activewearSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                // Add fade-in effect after scrolling
+                activewearSection.style.opacity = "0";
+                setTimeout(() => {
+                    activewearSection.style.transition = "opacity 1s ease-in-out";
+                    activewearSection.style.opacity = "1";
+                }, 300);
+            });
+        }
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+    });
+});
+
+</script>
+
+    
+
+</body>
+</html>
+

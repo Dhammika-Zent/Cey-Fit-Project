@@ -1,0 +1,221 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+/* Center the text */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+}
+
+.hero-content p {
+    margin-top: 10px;
+    margin-bottom: 7px;
+    border-right: 3px solid;
+    display: inline-block; /* Ensure width fits content */
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.2rem;
+    max-width: fit-content; /* Fix cursor alignment */
+    animation: typing 2s steps(53, end) forwards, cursor .4s step-end infinite alternate;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: max-content; } /* Adjust to text length */
+}
+
+/* Cursor Blinking */
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+
+
+
+/* Transparent Button with Key Color Border & Minimal RGB Glow */
+.cta-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966); /* Key Color Border */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6); /* Initial soft glow */
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+}
+
+/* Minimal RGB Glowing Effect */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 
+                    0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+/* Tsunami-like Wave Effect */
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(229, 255, 0, 0.178) 15%, transparent 80%);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: tsunamiWave 3s infinite linear;
+}
+
+/* Tsunami-like Wave Animation */
+@keyframes tsunamiWave {
+    0% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translate(-50%, -40%) scale(1.2);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(-50%, -60%) scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+}
+
+
+/* Hover Effect */
+.cta-btn:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966); /* Key color background */
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 
+                0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.6rem;
+        width: 90%; /* Allow more space */
+        white-space: nowrap; /* Keep one-line typing effect */
+        text-align: center;
+        overflow: hidden; /* Ensure typing animation works */
+        border-right: 3px solid; /* Keep blinking cursor effect */
+        animation: typing 2s steps(53) forwards, cursor .4s step-end infinite alternate;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 90%; } /* Extend width on mobile */
+}
+
+/* Cursor Blinking */
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+
+

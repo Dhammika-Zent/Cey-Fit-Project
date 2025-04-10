@@ -1,0 +1,320 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 85vh; /* Increased height for better mobile layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px; /* Added padding to prevent cropping */
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 1; /* Fixed incorrect opacity */
+}
+
+/* Dark Overlay for Contrast */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%; /* Adjusted for better responsiveness */
+    padding: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0; /* Removed excess margin */
+}
+
+/* Headline Styling */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Highlighted Key Color for 'Stay Fit' */
+.hero-content h1::after {
+    content: " Stay Fit!";
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+}
+
+
+/* Call-To-Action Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6);
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+}
+
+/* Glowing Effect */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+/* Hover Effect */
+.cta-btn:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966);
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh; /* Increased for better mobile display */
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.7rem;
+        width: 100%; /* Make sure it doesn't crop */
+        text-align: center;
+        overflow: hidden;
+        white-space: normal; /* Allow text wrapping */
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Highlight Active Navbar Link */
+.nav-links li a[href="activewear.html"] {
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    font-weight: normal;
+   
+}
+
+
+
+/* Key Activewear Designs Section */
+.activewear-gallery {
+    background-color: #111; /* Dark background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.activewear-gallery h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.activewear-gallery h2 span {
+    background: linear-gradient(90deg, rgba(255, 251, 0, 0.966) 0%, rgba(255, 251, 0, 0.966) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 0 5%;
+    justify-content: center;
+}
+
+/* Gallery Item */
+.gallery-item {
+    background: #222; /* Slightly lighter background */
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Required for absolute positioning inside */
+    text-align: center; /* Centers button */
+    box-shadow: 0 0 10px rgba(255, 251, 0, 0.966);
+}
+
+/* Hover Effects */
+.gallery-item:hover {
+    transform: scale(1.03);
+    
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block; /* Fix any spacing issues */
+}
+
+/* View Details Button */
+
+/* Ensure the anchor tag inside is clickable */
+.view-details a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: rgba(255, 251, 0, 0.966);
+    transition: color 0.3s ease-in-out; 
+}
+
+
+/* Minimal RGB Glowing Effect */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 
+                    0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+/* Tsunami-like Wave Effect */
+.view-details::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(229, 255, 0, 0.178) 15%, transparent 80%);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: tsunamiWave 3s infinite linear;
+}
+
+/* Tsunami-like Wave Animation */
+@keyframes tsunamiWave {
+    0% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translate(-50%, -40%) scale(1.2);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(-50%, -60%) scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+}
+
+
+/* Hover Effect */
+.view-details:hover {
+    color: black !important; /* Ensures text remains visible */
+    background: rgba(255, 251, 0, 0.966); /* Key color background */
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 
+                0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+.view-details:hover a {
+    color: black;
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 40px;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966); /* Key Color Border */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6); /* Initial soft glow */
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+    cursor: pointer;
+}
+
+.view-details:hover {
+    background: rgba(255, 251, 0, 0.966);
+    color: black;
+}
+
+
+
+
+

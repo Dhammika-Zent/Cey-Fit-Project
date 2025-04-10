@@ -1,0 +1,202 @@
+/* Activewear Section */
+.activewear {
+    background: black;
+    color: white;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Container */
+.activewear-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    gap: 50px;
+    opacity: 0;
+    transform: translateY(50px); /* Starts slightly lower */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* Show animation when scrolled */
+.activewear-container.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Left: Video Container */
+.activewear-video-container {
+    flex: 1;
+    position: relative;
+    max-width: 450px; /* Adjust for better scaling */
+}
+
+/* Gym Girl Video */
+.activewear-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Video Tag Above Video */
+.video-tag {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 251, 0, 0.966);
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 3rem;
+    border-radius: 5px;
+}
+
+/* Right: Text */
+.activewear-text {
+    flex: 1;
+    max-width: 550px;
+    text-align: left;
+}
+
+/* Heading */
+.activewear-text h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.activewear-text h2 span {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+/* Paragraph */
+.activewear-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Transparent Button with Key Color Border & Minimal RGB Glow */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966); /* Key Color Border */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6); /* Initial soft glow */
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+}
+
+/* Minimal RGB Glowing Effect */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 
+                    0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+/* Tsunami-like Wave Effect */
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(229, 255, 0, 0.178) 15%, transparent 80%);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: tsunamiWave 3s infinite linear;
+}
+
+/* Tsunami-like Wave Animation */
+@keyframes tsunamiWave {
+    0% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translate(-50%, -40%) scale(1.2);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+    75% {
+        transform: translate(-50%, -60%) scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -45%) scale(1);
+        opacity: 0.7;
+    }
+}
+
+
+/* Hover Effect */
+.cta-btn:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966); /* Key color background */
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 
+                0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .activewear-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activewear-video-container {
+        max-width: 100%;
+    }
+
+    .video-tag {
+        font-size: 7rem;
+    }
+
+    .activewear-text {
+        text-align: center;
+    }
+
+    .activewear-text h2 {
+        font-size: 2rem;
+        margin-top: -1.5rem;
+    }
+
+    .activewear-text p {
+        font-size: 0.9rem;
+        margin-top: -0.2rem;
+    }
+
+    .video-tag {
+        top: -30px;
+        font-size: 2rem; /* Increased for better visibility */
+    }
+    
+}

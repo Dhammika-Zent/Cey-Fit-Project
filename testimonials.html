@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cey Fit - Testimonials</title>
+    <link rel="stylesheet" href="navbar styles.css">
+    <link rel="stylesheet" href="testimonial full styles.css">
+    <link rel="stylesheet" href="footer styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="img/logo final.png" alt="Cey Fit Logo" onclick="redirectToHome()">
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="activewear.html">ActiveWear</a></li>
+        <li><a href="promowear.html">PromoWear</a></li>
+        <li><a href="testimonials.html">Clients</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+    <!-- Testimonial Submission Form -->
+    <section class="testimonial-form">
+        <h2>Share Your <span>Experience!</span></h2>
+        <form id="testimonialForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="profession" placeholder="Your Profession" required>
+            <textarea id="testimonial" placeholder="Your Testimonial" required></textarea>
+            <input type="file" id="profilePic" accept="image/*">
+
+            <button type="submit">Submit Testimonial</button>
+        </form>
+    </section>
+
+    <!-- All Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our <span>Clients Say</span></h2>
+        <div class="testimonial-container" id="testimonialContainer">
+            <!-- Testimonials will be added here dynamically -->
+        </div>
+    </section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cey Fit Logo -->
+        <div class="footer-logo">
+            <img src="img/logo final.png" alt="Cey Fit Logo">
+        </div>
+
+        <!-- Social Media Section -->
+        <p class="footer-heading">We are available on:</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Quick Links Section -->
+        <p class="footer-heading">Quick Links:</p>
+        <div class="footer-links">
+            <a href="#" id="scrollToTop">Home</a>
+            <a href="activewear.html">ActiveWear</a>
+            <a href="promowear.html">PromoWear</a>
+            <a href="testimonials.html">Clients</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <p class="copyright">© 2025 Cey Fit. All Rights Reserved.</p>
+        <p class="credits">
+            A website by 
+            <a href="http://zent.lovestoblog.com" target="_blank" class="highlight">Dhammika Zent</a>
+        </p>
+
+        <!-- LinkedIn & WhatsApp Contact -->
+<p class="contact-links">
+    <i class="fab fa-whatsapp"></i> 
+    <a href="https://wa.me/94728462951" target="_blank">+94 72 8 462 951</a> |  
+    <i class="fab fa-linkedin"></i> 
+    <a href="https://www.linkedin.com/in/dhammika-senarathna-032156351/" target="_blank">Dhammika Senarathna</a>
+</p>
+
+    </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonialForm = document.getElementById("testimonialForm");
+    const testimonialContainer = document.getElementById("testimonialContainer");
+
+    // Load testimonials from localStorage when page loads
+    function loadTestimonials() {
+        let savedTestimonials = localStorage.getItem("testimonials");
+        if (savedTestimonials) {
+            testimonialContainer.innerHTML = savedTestimonials;
+        }
+    }
+    loadTestimonials();
+
+    testimonialForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Get form values
+        let name = document.getElementById("name").value;
+        let profession = document.getElementById("profession").value;
+        let testimonial = document.getElementById("testimonial").value;
+        let profilePic = document.getElementById("profilePic").files[0];
+
+        let testimonialCard = document.createElement("div");
+        testimonialCard.classList.add("testimonial-card");
+
+        if (profilePic) {
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                let imgSrc = event.target.result;
+                testimonialCard.innerHTML = `
+                    <img src="${imgSrc}" alt="${name}">
+                    <h3>${name}</h3>
+                    <p class="profession">${profession}</p>
+                    <p class="feedback">"${testimonial}"</p>
+                `;
+                appendTestimonial(testimonialCard);
+            };
+            reader.readAsDataURL(profilePic);
+        } else {
+            testimonialCard.innerHTML = `
+                <h3>${name}</h3>
+                <p class="profession">${profession}</p>
+                <p class="feedback">"${testimonial}"</p>
+            `;
+            appendTestimonial(testimonialCard);
+        }
+    });
+
+    function appendTestimonial(card) {
+        // Append to testimonial container
+        testimonialContainer.appendChild(card);
+
+        // Save updated testimonials to localStorage
+        localStorage.setItem("testimonials", testimonialContainer.innerHTML);
+
+        // Clear form
+        testimonialForm.reset();
+    }
+});
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+    });
+});
+
+</script>
+
+
+
+<script defer src="testimonials full script.js"></script>
+
+
+    </body>
+</html>

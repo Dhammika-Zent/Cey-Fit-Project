@@ -1,0 +1,179 @@
+/* Activewear Details Page Styles */
+.activewear-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background: #121212;
+}
+
+
+
+/* Image Section */
+.image-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 251, 0, 0.966);
+    margin-top: 120px; /* Adjust this value based on your navbar height */
+}
+
+
+/* Details Section */
+.details-container {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.details-container h2 {
+    font-size: 2rem;
+    color: #e6e6e6;
+    margin-top: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #bbb;
+}
+
+.design-info {
+    list-style: bullets;
+    padding: 0;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.design-info li {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #ddd;
+}
+
+/* Contact Message */
+.cta-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: white;
+    margin-top: 40px;
+}
+
+/* WhatsApp Contact Button */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6);
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+}
+
+/* Glowing Effect */
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+.whatsapp-btn:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966);
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.whatsapp-btn i {
+    margin-right: 8px;
+}
+
+/* Back Button */
+.back-btn {
+    position: fixed;
+    top: 90px;
+    left: 20px;
+    background: transparent;
+    padding: 5px;
+    border-radius: 60%;
+    
+    transition: transform 0.3s ease;
+}
+
+.back-btn i {
+    color: #555;
+    font-size: 1.2rem;
+    opacity: 2; /* Ensure visibility after animation */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+
+.highlight-text {
+    color: rgba(255, 251, 0, 0.966); /* Yellow Color */
+}
+
+/* Highlight Active Navbar Link */
+.nav-links li a[href="activewear.html"] {
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    font-weight: normal;
+   
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .details-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
+    .design-info li {
+        font-size: 0.8rem;
+    }
+
+    .cta-message {
+        font-size: 1rem;
+    }
+
+    .whatsapp-btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .back-btn i {
+        font-size: 1rem;
+    }
+}

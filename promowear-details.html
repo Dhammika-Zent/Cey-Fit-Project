@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promowear Details | Cey Fit</title>
+    <link rel="stylesheet" href="navbar styles.css">
+    <link rel="stylesheet" href="footer styles.css">
+    <link rel="stylesheet" href="promowear-details styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+ <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">
+        <img src="img/logo final.png" alt="Cey Fit Logo" onclick="redirectToHome()">
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="activewear.html">ActiveWear</a></li>
+        <li><a href="promowear.html">PromoWear</a></li>
+        <li><a href="testimonials.html">Clients</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+
+<!-- Promowear Details Section -->
+<section class="promowear-details">
+    <div class="image-container">
+        <img src="img/promowear-sample.jpg" alt="Promowear Design">
+    </div>
+
+    <div class="details-container">
+        <h2></h2>
+        <p class="description"></p>
+        
+        <ul class="design-info"></ul>
+
+        <p class="cta-message">
+            Want to design <span class="highlight-text">your own outstanding promowear</span> like this?  
+            Let's make it happen! Contact us now.
+        </p>
+        
+
+        <a href="https://wa.me/94728462951" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Contact Us
+        </a>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Cey Fit Logo -->
+        <div class="footer-logo">
+            <img src="img/logo final.png" alt="Cey Fit Logo">
+        </div>
+
+        <!-- Social Media Section -->
+        <p class="footer-heading">We are available on:</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Quick Links Section -->
+        <p class="footer-heading">Quick Links:</p>
+        <div class="footer-links">
+            <a href="#" id="scrollToTop">Home</a>
+            <a href="activewear.html">ActiveWear</a>
+            <a href="promowear.html">PromoWear</a>
+            <a href="testimonials.html">Clients</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <p class="copyright">© 2025 Cey Fit. All Rights Reserved.</p>
+        <p class="credits">
+            A website by 
+            <a href="http://zent.lovestoblog.com" target="_blank" class="highlight">Dhammika Zent</a>
+        </p>
+
+        <!-- LinkedIn & WhatsApp Contact -->
+<p class="contact-links">
+    <i class="fab fa-whatsapp"></i> 
+    <a href="https://wa.me/94728462951" target="_blank">+94 72 8 462 951</a> |  
+    <i class="fab fa-linkedin"></i> 
+    <a href="https://www.linkedin.com/in/dhammika-senarathna-032156351/" target="_blank">Dhammika Senarathna</a>
+</p>
+
+    </div>
+</footer>
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+
+
+
+<script>
+
+// Sample PromoWear Data
+const promowearData = [
+    {
+        id: 1,
+        name: "Premium Gym T-Shirt",
+        description: "This high-performance gym t-shirt is designed for ultimate comfort and flexibility. Made with breathable fabric to keep you cool and dry during workouts.",
+        image: "img/MOCKUP PREVIEW.png",
+        launchDate: "March 2025",
+        materials: "95% Polyester, 5% Spandex",
+        colors: "Black, Grey, Blue",
+        customization: "Yes, available on demand",
+        status: "Available Now"
+    },
+    {
+        id: 2,
+        name: "Performance Running Shirt",
+        description: "Lightweight and breathable running shirt for optimal performance. Perfect for long-distance runs and high-intensity workouts.",
+        image: "img/MOCKUP_PREVIEW.png",
+        launchDate: "April 2025",
+        materials: "88% Nylon, 12% Elastane",
+        colors: "Red, Black, White",
+        customization: "Yes, custom prints available",
+        status: "Coming Soon"
+    },
+    {
+        id: 3,
+        name: "Stretch Fit Compression Tee",
+        description: "Engineered for maximum muscle support and comfort. Ideal for weightlifting and high-intensity training.",
+        image: "img/sjrk.png",
+        launchDate: "May 2025",
+        materials: "90% Polyester, 10% Lycra",
+        colors: "Black, Navy, Charcoal",
+        customization: "Yes, available",
+        status: "Limited Stock"
+    },
+    {
+        id: 4,
+        name: "Dry-Fit Training Tank",
+        description: "Perfect for summer training sessions. Sweat-wicking technology keeps you dry and fresh.",
+        image: "img/TQE.png",
+        launchDate: "June 2025",
+        materials: "85% Polyester, 15% Spandex",
+        colors: "Blue, Grey, Green",
+        customization: "Available",
+        status: "New Arrival"
+    },
+    {
+        id: 5,
+        name: "Athletic Long Sleeve Shirt",
+        description: "Designed for outdoor training and cold weather workouts. Keeps you warm and dry while maintaining flexibility.",
+        image: "img/wet.png",
+        launchDate: "July 2025",
+        materials: "80% Polyester, 20% Spandex",
+        colors: "White, Black, Olive",
+        customization: "Yes, custom logo prints available",
+        status: "Available Now"
+    }
+];
+
+// Function to get URL Parameter (Extracting `id`)
+function getURLParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Get the PromoWear ID from URL
+const promoWearId = getURLParameter('id');
+
+// Find the matching product
+const promoWearItem = promowearData.find(item => item.id == promoWearId);
+
+// If product is found, update the page content
+if (promoWearItem) {
+    const imageElement = document.querySelector(".image-container img");
+    const titleElement = document.querySelector(".details-container h2");
+    const descriptionElement = document.querySelector(".description");
+    const infoListElement = document.querySelector(".design-info");
+
+    if (imageElement) imageElement.src = promoWearItem.image;
+    if (titleElement) titleElement.textContent = promoWearItem.name;
+    if (descriptionElement) descriptionElement.textContent = promoWearItem.description;
+    
+    if (infoListElement) {
+        infoListElement.innerHTML = `
+            <li><strong>Launched Date:</strong> ${promoWearItem.launchDate}</li>
+            <li><strong>Materials Used:</strong> ${promoWearItem.materials}</li>
+            <li><strong>Available Colors:</strong> ${promoWearItem.colors}</li>
+            <li><strong>Customization:</strong> ${promoWearItem.customization}</li>
+            <li><strong>Status:</strong> ${promoWearItem.status}</li>
+        `;
+    }
+} else {
+    
+    document.querySelector(".promowear-details").innerHTML = "<h2>Product Not Found</h2>";
+}
+</script>
+
+<script>
+    function redirectToHome() {
+        window.location.href = "home.html";
+    }
+</script>
+  
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+    });
+});
+
+</script>
+
+
+</body>
+</html>

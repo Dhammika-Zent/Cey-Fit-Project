@@ -1,0 +1,202 @@
+/* Footer Section */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px 5%;
+    font-size: 1rem;
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Footer Headings */
+.footer-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgba(255, 251, 0, 0.966);
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: rgba(255, 251, 0, 0.966);
+    transform: scale(1.1);
+}
+
+/* Quick Links */
+.footer-links {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Spacing between links */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    
+    color:rgba(255, 251, 0, 0.966);
+}
+
+.whatsapp-contact a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+/* Mobile View: Make Quick Links Vertical */
+@media (max-width: 768px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin-bottom: 8px; /* Space between links */
+        font-size: 0.90rem;
+    }
+}
+
+/* Copyright & Credits */
+.copyright {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.credits {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Link to Your Portfolio */
+.credits a {
+    color: rgba(255, 251, 0, 0.966);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.credits a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Contact Links (WhatsApp & LinkedIn) */
+.contact-links {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between WhatsApp & LinkedIn */
+}
+
+/* Keep real colors for icons */
+.contact-links i.fab.fa-whatsapp {
+    color: #25D366; /* WhatsApp Green */
+}
+
+.contact-links i.fab.fa-linkedin {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.contact-links a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Apply hover effect only to text links, not icons */
+.contact-links a:hover {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+.contact-links i:hover {
+    color: inherit; /* Keeps the original WhatsApp/LinkedIn colors */
+}
+
+/* Footer Logo */
+.footer-logo {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.footer-logo img {
+    max-width: 90px;  /* Adjust size */
+    height: auto;
+    display: inline-block;
+    filter: drop-shadow(0px 0px 8px rgba(255, 251, 0, 0.8)); /* Yellow glow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.footer-logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: drop-shadow(0px 0px 12px rgba(255, 251, 0, 1)); /* Brighter glow */
+}
+
+
+@keyframes swing {
+    
+    0% { transform: rotate(10deg); }
+    
+    50% { transform: rotate(-10deg); }
+
+    100% { transform: rotate(10deg);}
+    
+}
+
+/* Apply animation to footer logo */
+.footer-logo img {
+    animation: swing 2s infinite ease-in-out;
+    transform-origin: top center; /* Makes it swing from the top */
+}
+
+/* Fix WhatsApp & LinkedIn Links Wrapping */
+.contact-links {
+    display: flex; 
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    justify-content: center; /* Center align */
+    gap: 10px; /* Space between links */
+    white-space: nowrap; /* Prevents breaking */
+}
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+    .contact-links {
+        flex-wrap: nowrap; /* Ensures links stay in one line */
+        gap: 6px; /* Adjust spacing for small screens */
+    }
+
+    .contact-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 1px; /* Reduce space between icon & text */
+        font-size: 0.70rem;
+    }
+}
+

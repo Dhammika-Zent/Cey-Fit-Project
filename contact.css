@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Same height as Activewear Hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full cover */
+    z-index: -2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+}
+
+
+/* Dark Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
+}
+
+/* Hero Title */
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+/* Hero Text */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    color: rgba(255, 251, 0, 0.966);
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6);
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+}
+
+.cta-btn:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966);
+    border-color: rgba(255, 251, 0, 0.966);
+    box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 
+                0 0 18px rgba(255, 251, 0, 0.6);
+}
+
+/* Email Form Section */
+.email-section {
+    text-align: center;
+    padding: 50px;
+    background: #222;
+    border-radius: 10px;
+    width: 60%;
+    margin: 50px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.email-section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.email-section h2 span {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+.email-section input,
+.email-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: #111;
+    color: white;
+}
+
+.email-section button {
+    width: 30%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: rgba(255, 251, 0, 0.966);
+    background: transparent;
+    border: 2px solid rgba(255, 251, 0, 0.966);
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 251, 0, 0.6);
+    animation: rgbGlow 3s infinite alternate ease-in-out;
+    cursor: pointer;
+}
+
+.email-section button:hover {
+    color: black;
+    background: rgba(255, 251, 0, 0.966);
+    border-color: rgba(255, 251, 0, 0.966);
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact-info h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.contact-info h2 span {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.contact-info a {
+    color: rgba(255, 251, 0, 0.966);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Google Map */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 251, 0, 0.5);
+}
+
+/* Social Media */
+.social-media a {
+    color: rgba(255, 251, 0, 0.966);
+    font-size: 1.5rem;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 5px;
+}
+
+.footer .highlight {
+    color: rgba(255, 251, 0, 0.966);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rgbGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 
+                    0 0 12px rgba(255, 251, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                    0 0 10px rgba(255, 251, 0, 0.3);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .email-section {
+        width: 90%;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+}
+
+.email-section {
+    text-align: center;
+    padding: 50px 20px; /* Reduced padding for smaller screens */
+    background: #222;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%; /* More mobile-friendly */
+    margin: 50px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .email-section {
+        width: 95%; /* Takes more space on mobile */
+        padding: 30px 15px; /* Adjust padding */
+    }
+
+    .email-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .email-section input,
+    .email-section textarea {
+        width: 100%; /* Full width for mobile */
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+
+    .email-section button {
+        width: 100%; /* Full width button for easier tap */
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Highlight Active Navbar Link */
+.nav-links li a[href="contact.html"] {
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    font-weight: normal;
+   
+}
+
+

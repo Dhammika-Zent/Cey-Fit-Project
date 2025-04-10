@@ -1,0 +1,240 @@
+/* General Page Styling */
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Highlight Active Navbar Link */
+.nav-links li a[href="testimonials.html"] {
+    color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+    font-weight: normal;
+   
+   
+}
+
+
+/* Testimonial Form */
+.testimonial-form {
+    text-align: center;
+    padding: 50px;
+    background: #111;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 50%;
+    margin-top: 100px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonial-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-form span {
+    color: yellow;
+}
+
+.testimonial-form input, 
+.testimonial-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+    .testimonial-form button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: normal;
+        color: rgba(255, 251, 0, 0.966); /* Cey Fit’s Key Color */
+        background: transparent;
+        border: 2px solid rgba(255, 251, 0, 0.966); /* Key Color Border */
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 5px rgba(255, 251, 0, 0.6); /* Initial soft glow */
+        animation: rgbGlow 3s infinite alternate ease-in-out;
+        cursor: pointer;
+    }
+    
+    /* Minimal RGB Glowing Effect */
+    @keyframes rgbGlow {
+        0% {
+            box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                        0 0 10px rgba(255, 251, 0, 0.3);
+        }
+        50% {
+            box-shadow: 0 0 8px rgba(255, 251, 0, 0.6), 
+                        0 0 12px rgba(255, 251, 0, 0.5);
+        }
+        100% {
+            box-shadow: 0 0 5px rgba(255, 251, 0, 0.4), 
+                        0 0 10px rgba(255, 251, 0, 0.3);
+        }
+    }
+    
+    /* Tsunami-like Wave Effect */
+    .testimonial-form button::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250%;
+        height: 300%;
+        background: radial-gradient(circle, rgba(229, 255, 0, 0.178) 15%, transparent 80%);
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: tsunamiWave 3s infinite linear;
+    }
+    
+    /* Tsunami-like Wave Animation */
+    @keyframes tsunamiWave {
+        0% {
+            transform: translate(-50%, -45%) scale(1);
+            opacity: 0.7;
+        }
+        25% {
+            transform: translate(-50%, -40%) scale(1.2);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0.3;
+        }
+        75% {
+            transform: translate(-50%, -60%) scale(1.2);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translate(-50%, -45%) scale(1);
+            opacity: 0.7;
+        }
+    }
+    
+    
+    /* Hover Effect */
+    .testimonial-form button:hover {
+        color: black;
+        background: rgba(255, 251, 0, 0.966); /* Key color background */
+        border-color: rgba(255, 251, 0, 0.966);
+        box-shadow: 0 0 12px rgba(255, 251, 0, 0.8), 
+                    0 0 18px rgba(255, 251, 0, 0.6);
+    }
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1s ease-in-out;
+    
+    
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    
+}
+
+.testimonials span {
+    color: yellow;
+}
+
+/* Testimonial Cards */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.testimonial-card {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 251, 0, 0.966);
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    margin: 5px 0;
+}
+
+.testimonial-card .profession {
+    color: yellow;
+    font-style: italic;
+}
+
+.testimonial-card .feedback {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.testimonial-form {
+    margin-bottom: 20px; /* Reduce the gap */
+}
+
+.testimonials {
+    padding-top: 30px; /* Reduce top padding */
+}
+
+
+
+@media (max-width: 768px) {
+    .testimonial-form {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 30px; /* Reduce padding */
+    }
+
+    .testimonial-form h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .testimonial-form input,
+    .testimonial-form textarea {
+        font-size: 0.6rem; /* Increase input text size for better readability */
+    }
+
+    .testimonial-form button {
+        font-size: 1rem; /* Adjust button size */
+        padding: 10px 25px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .testimonials {
+        font-size: 0.7rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
